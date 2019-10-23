@@ -24,6 +24,7 @@ public class HeartCollect : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         collectSound.Play();
+        HealthMonitor.HealthValue++;
         thisHeart.SetActive(false);
     }
 }
