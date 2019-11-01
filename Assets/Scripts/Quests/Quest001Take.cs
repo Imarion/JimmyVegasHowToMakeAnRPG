@@ -33,6 +33,8 @@ public class Quest001Take : MonoBehaviour
 
             if (Input.GetButtonDown("Action"))
             {
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
                 ActionKey.SetActive(false);
                 ActionText.SetActive(false);
                 UIQuest.SetActive(true);
