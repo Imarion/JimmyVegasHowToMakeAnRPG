@@ -13,6 +13,8 @@ public class Q001Objective03 : MonoBehaviour
     public GameObject ActionText;
     public GameObject TheObjective;
     public GameObject ChestBlock;
+    public GameObject ExMark;
+    public GameObject QuestComplete;
     public int CloseObjective = 0;
 
     // Start is called before the first frame update
@@ -57,6 +59,8 @@ public class Q001Objective03 : MonoBehaviour
                 CloseObjective = 3;
                 ActionText.SetActive(false);
                 ActionDisplay.SetActive(false);
+                ExMark.SetActive(true);
+                QuestComplete.SetActive(true);
             }
         }
     }
