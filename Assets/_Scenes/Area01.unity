@@ -641,7 +641,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 159112, guid: e608e3bb17dc020489835bb64f6bf570, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 460934, guid: e608e3bb17dc020489835bb64f6bf570, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2153,6 +2153,20 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 232230377}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &904906502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 904906501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b37340afcf50aa429d424f06978aa84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Sword: {fileID: 904906501}
+  SwordStatus: 0
 --- !u!111 &904906505
 Animation:
   m_ObjectHideFlags: 0
@@ -2166,7 +2180,7 @@ Animation:
   m_Animations:
   - {fileID: 7400000, guid: 10ea137ca1c4ffe4a81409f99b72c61b, type: 2}
   m_WrapMode: 0
-  m_PlayAutomatically: 1
+  m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_CullingType: 0
 --- !u!1 &959414549
@@ -4852,6 +4866,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2134546667}
   - component: {fileID: 2134546666}
+  - component: {fileID: 2134546668}
   m_Layer: 0
   m_Name: GlobalStat
   m_TagString: Untagged
@@ -4886,3 +4901,16 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2134546668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2134546665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecbd83cc6ff801b4e84805ea070726c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InternalBlock: 0

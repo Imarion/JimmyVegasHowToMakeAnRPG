@@ -28,18 +28,20 @@ public class Quest001Take : MonoBehaviour
     {
         if (TheDistance <= 3)
         {
+            AttackBlocker.BlockSword = 1;
             ActionKey.SetActive(true);
             ActionText.SetActive(true);
 
             if (Input.GetButtonDown("Action"))
             {
+                AttackBlocker.BlockSword = 2;
                 Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
                 ActionKey.SetActive(false);
                 ActionText.SetActive(false);
                 UIQuest.SetActive(true);
                 NoticeCam.SetActive(true);
-                ThePlayer.SetActive(false);
+                ThePlayer.SetActive(false);                
             }
         }
     }
@@ -48,5 +50,6 @@ public class Quest001Take : MonoBehaviour
     {
         ActionKey.SetActive(false);
         ActionText.SetActive(false);
+        AttackBlocker.BlockSword = 0;
     }
 }
