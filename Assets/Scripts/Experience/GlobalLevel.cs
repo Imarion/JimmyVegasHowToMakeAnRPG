@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GlobalExp : MonoBehaviour
+public class GlobalLevel : MonoBehaviour
 {
-    public static int CurrentExp;
-    public int InternalExp;
+
+    public static int CurrentLevel = 1;
+    public int InternalLevel;
 
     // Start is called before the first frame update
     void Start()
@@ -16,6 +17,6 @@ public class GlobalExp : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        InternalExp = CurrentExp;
+        InternalLevel = CurrentLevel;
     }
 }
