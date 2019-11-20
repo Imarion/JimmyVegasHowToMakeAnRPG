@@ -15,6 +15,7 @@ public class Quest001Buttons : MonoBehaviour
     public GameObject ExMark;
     public GameObject TheNotice;
     public GameObject NoticeTrigger;
+    public GameObject MiniMap;
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +31,7 @@ public class Quest001Buttons : MonoBehaviour
 
     public void AcceptQuest()
     {
+        MiniMap.SetActive(true);
         QuestManager.SubquestNumber = 1;
         ThePlayer.SetActive(true);
         NoticeCam.SetActive(false);
@@ -39,6 +41,7 @@ public class Quest001Buttons : MonoBehaviour
 
     public void DeclineQuest()
     {
+        MiniMap.SetActive(true);
         ThePlayer.SetActive(true);
         NoticeCam.SetActive(false);
         UIQuest.SetActive(false);

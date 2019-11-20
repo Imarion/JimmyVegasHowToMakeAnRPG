@@ -11,6 +11,7 @@ public class Quest001Take : MonoBehaviour
     public GameObject UIQuest;
     public GameObject ThePlayer;
     public GameObject NoticeCam;
+    public GameObject MiniMap;
 
     // Start is called before the first frame update
     void Start()
@@ -34,6 +35,7 @@ public class Quest001Take : MonoBehaviour
 
             if (Input.GetButtonDown("Action"))
             {
+                MiniMap.SetActive(false);
                 AttackBlocker.BlockSword = 2;
                 Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
