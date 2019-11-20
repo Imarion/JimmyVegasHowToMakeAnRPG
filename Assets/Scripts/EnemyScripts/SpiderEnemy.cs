@@ -9,11 +9,14 @@ public class SpiderEnemy : MonoBehaviour
     public int SpiderStatus;
     public int BaseXP = 10;
     public int CalculatedXP;
+    public SpiderAI SpiderAIScript;
+
+    public static int GlobalSpider;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        SpiderAIScript = GetComponent<SpiderAI>();
     }
 
     void DeductPoints(int DamageAmount)
@@ -24,6 +27,7 @@ public class SpiderEnemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        GlobalSpider = SpiderStatus;
         if (EnemyHealth <= 0)
         {
             if (SpiderStatus == 0)
@@ -35,6 +39,7 @@ public class SpiderEnemy : MonoBehaviour
 
     IEnumerator DeathSpider()
     {
+        SpiderAIScript.enabled = false;
         SpiderStatus = 6;
         CalculatedXP = BaseXP * GlobalLevel.CurrentLevel;
         GlobalXP.CurrentXP += CalculatedXP;
