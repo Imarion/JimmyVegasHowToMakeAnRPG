@@ -53,6 +53,7 @@ public class Q001Objective03 : MonoBehaviour
 
             if (Input.GetButtonDown("Action"))
             {
+                QuestManager.SubquestNumber = 3;
                 this.GetComponent<BoxCollider>().enabled = false;
                 FakeSword.SetActive(false);
                 RealSword.SetActive(true);

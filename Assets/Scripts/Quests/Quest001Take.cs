@@ -41,7 +41,7 @@ public class Quest001Take : MonoBehaviour
                 ActionText.SetActive(false);
                 UIQuest.SetActive(true);
                 NoticeCam.SetActive(true);
-                ThePlayer.SetActive(false);                
+                ThePlayer.SetActive(false);
             }
         }
     }

@@ -33,6 +33,8 @@ public class Q001Objective01 : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        QuestManager.SubquestNumber = 2;
+        GetComponent<BoxCollider>().enabled = false;
         StartCoroutine(FinishObjective());
     }
 

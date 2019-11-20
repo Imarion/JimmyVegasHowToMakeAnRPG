@@ -38,6 +38,7 @@ public class Quest001Complete : MonoBehaviour
             {
                 // Cursor.lockState = CursorLockMode.None;
                 // Cursor.visible = true;
+                QuestManager.SubquestNumber = 0;
                 ExMark.SetActive(false);
                 GlobalXP.CurrentXP += 100;
                 ActionKey.SetActive(false);
