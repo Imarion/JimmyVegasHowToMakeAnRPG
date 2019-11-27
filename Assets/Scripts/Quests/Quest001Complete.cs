@@ -40,6 +40,8 @@ public class Quest001Complete : MonoBehaviour
                 // Cursor.visible = true;
                 QuestManager.SubquestNumber = 0;
                 GlobalCash.GoldAmount += 100;
+                PlayerPrefs.SetInt("GoldAmountSave", GlobalCash.GoldAmount);
+                QuestManager.ActiveQuestNumber = 2;
                 ExMark.SetActive(false);
                 GlobalXP.CurrentXP += 100;
                 ActionKey.SetActive(false);

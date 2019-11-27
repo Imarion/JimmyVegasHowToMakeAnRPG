@@ -2,15 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SaveGold : MonoBehaviour
+public class Ques002Start : MonoBehaviour
 {
-
-    public int LoadGold;
-
     // Start is called before the first frame update
     void Start()
     {
-         LoadGold = PlayerPrefs.GetInt("GoldAmountSave", GlobalCash.GoldAmount);
+        
     }
 
     // Update is called once per frame
@@ -19,5 +16,8 @@ public class SaveGold : MonoBehaviour
         
     }
 
-    
+    private void OnTriggerEnter(Collider other)
+    {
+        
+    }
 }

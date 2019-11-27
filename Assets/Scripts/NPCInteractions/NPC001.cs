@@ -56,20 +56,37 @@ public class NPC001 : MonoBehaviour
 
     IEnumerator NPC001Active()
     {
-        TextBox.SetActive(true);
-        NPCName.GetComponent<Text>().text = "Warrior";
-        NPCName.SetActive(true);
-        NPCText.GetComponent<Text>().text = "Hello friend, I may have a quest for you if you wish to accept it. Please come back later on this afternoon.";
-        NPCText.SetActive(true);
+        if (QuestManager.ActiveQuestNumber == 2)
+        {
+            TextBox.SetActive(true);
+            NPCName.GetComponent<Text>().text = "Warrior";
+            NPCName.SetActive(true);
+            NPCText.GetComponent<Text>().text = "We have a spider problem. Can you go outside the village, kill the spiders and their boss.";
+            NPCText.SetActive(true);
 
-        yield return new WaitForSeconds(5.5f);
+            yield return new WaitForSeconds(5.5f);
 
-        NPCName.SetActive(false);
-        NPCText.SetActive(false);
-        TextBox.SetActive(false);
-        ActionKey.SetActive(true);
-        ActionText.SetActive(true);
+            NPCName.SetActive(false);
+            NPCText.SetActive(false);
+            TextBox.SetActive(false);
+            ActionKey.SetActive(true);
+            ActionText.SetActive(true);
+        }
+        else
+        {
+            TextBox.SetActive(true);
+            NPCName.GetComponent<Text>().text = "Warrior";
+            NPCName.SetActive(true);
+            NPCText.GetComponent<Text>().text = "Hello friend, I may have a quest for you if you wish to accept it. Please come back later on this afternoon.";
+            NPCText.SetActive(true);
 
+            yield return new WaitForSeconds(5.5f);
 
+            NPCName.SetActive(false);
+            NPCText.SetActive(false);
+            TextBox.SetActive(false);
+            ActionKey.SetActive(true);
+            ActionText.SetActive(true);
+        }
     }
 }
