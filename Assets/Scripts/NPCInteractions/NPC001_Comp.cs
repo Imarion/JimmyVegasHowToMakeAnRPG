@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class NPC001 : MonoBehaviour
+public class NPC001_Comp : MonoBehaviour
 {
     public float TheDistance;
     public GameObject ActionKey;
@@ -59,12 +59,16 @@ public class NPC001 : MonoBehaviour
 
     IEnumerator NPC001Active()
     {
-        if (QuestManager.ActiveQuestNumber == 2)
+        if (QuestManager.ActiveQuestNumber == 2 && QuestManager.SubquestNumber == 4)
         {
             TextBox.SetActive(true);
             NPCName.GetComponent<Text>().text = "Warrior";
             NPCName.SetActive(true);
-            NPCText.GetComponent<Text>().text = "We have a spider problem. Can you go outside the village, kill the spiders and their boss.";
+            NPCText.GetComponent<Text>().text = "Thank you very much for your help. There is a cave outside the village. Please go explore.";
+            //cave object set here
+            QuestManager.ActiveQuestNumber = 3;
+            QuestManager.SubquestNumber = 1;
+
             NPCText.SetActive(true);
 
             yield return new WaitForSeconds(5.5f);
@@ -83,7 +87,7 @@ public class NPC001 : MonoBehaviour
             TextBox.SetActive(true);
             NPCName.GetComponent<Text>().text = "Warrior";
             NPCName.SetActive(true);
-            NPCText.GetComponent<Text>().text = "Hello friend, I may have a quest for you if you wish to accept it. Please come back later on this afternoon.";
+            NPCText.GetComponent<Text>().text = "Please come and see me when you have explored the cave.";
             NPCText.SetActive(true);
 
             yield return new WaitForSeconds(5.5f);
@@ -91,8 +95,8 @@ public class NPC001 : MonoBehaviour
             NPCName.SetActive(false);
             NPCText.SetActive(false);
             TextBox.SetActive(false);
-            ActionKey.SetActive(false);
-            ActionText.SetActive(false);
+            ActionKey.SetActive(true);
+            ActionText.SetActive(true);
         }
     }
 }

@@ -57,5 +57,7 @@ public class SpiderBossEnemy : MonoBehaviour
 
         OldNPC.SetActive(false);
         NewNPC.SetActive(true);
+
+        QuestManager.SubquestNumber = 4;
     }
 }
