@@ -23,7 +23,7 @@ public class NecroWalkAI : MonoBehaviour
     void Update()
     {
         transform.LookAt(NPCdest.transform);
-        transform.position = Vector3.MoveTowards(transform.position, NPCdest.transform.position, WalkSpeed);
+        transform.position = Vector3.MoveTowards(transform.position, NPCdest.transform.position, WalkSpeed * Time.timeScale);
     }
 
     IEnumerator RunRandomWalk()
