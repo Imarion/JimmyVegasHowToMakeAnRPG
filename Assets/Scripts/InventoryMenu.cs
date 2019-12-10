@@ -67,4 +67,17 @@ public class InventoryMenu : MonoBehaviour
         QuestPanel.SetActive(false);
         StatsPanel.SetActive(true);
     }
+
+    public void Close()
+    {
+        invMenu.SetActive(false);
+        Cursor.visible = false;
+        invOpen = false;
+        Time.timeScale = 1;
+        thePlayer.GetComponent<FirstPersonController>().enabled = true;
+
+        ItemPanel.SetActive(false);
+        QuestPanel.SetActive(false);
+        StatsPanel.SetActive(false);
+    }
 }

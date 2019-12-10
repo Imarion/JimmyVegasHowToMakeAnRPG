@@ -11,7 +11,7 @@ public class Quest001Take : MonoBehaviour
     public GameObject UIQuest;
     public GameObject ThePlayer;
     public GameObject NoticeCam;
-    public GameObject MiniMap;
+    public GameObject MiniMap;    
 
     // Start is called before the first frame update
     void Start()
@@ -44,6 +44,8 @@ public class Quest001Take : MonoBehaviour
                 UIQuest.SetActive(true);
                 NoticeCam.SetActive(true);
                 ThePlayer.SetActive(false);
+                MasterQuest.mainQuestName = "Find the sword.";
+                MasterQuest.mainQuestInfo = "I have to find the sword which is said to be inside a chest in the forest.";
             }
         }
     }
