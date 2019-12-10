@@ -9,6 +9,10 @@ public class InventoryMenu : MonoBehaviour
     public GameObject invMenu;
     public GameObject thePlayer;
 
+    public GameObject ItemPanel;
+    public GameObject QuestPanel;
+    public GameObject StatsPanel;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -35,7 +39,32 @@ public class InventoryMenu : MonoBehaviour
                 invOpen = false;
                 Time.timeScale = 1;
                 thePlayer.GetComponent<FirstPersonController>().enabled = true;
+
+                ItemPanel.SetActive(false);
+                QuestPanel.SetActive(false);
+                StatsPanel.SetActive(false);
             }
         }
+    }
+
+    public void ShowItems()
+    {
+        ItemPanel.SetActive(true);
+        QuestPanel.SetActive(false);
+        StatsPanel.SetActive(false);
+    }
+
+    public void ShowQuests()
+    {
+        ItemPanel.SetActive(false);
+        QuestPanel.SetActive(true);
+        StatsPanel.SetActive(false);
+    }
+
+    public void ShowStats()
+    {
+        ItemPanel.SetActive(false);
+        QuestPanel.SetActive(false);
+        StatsPanel.SetActive(true);
     }
 }
