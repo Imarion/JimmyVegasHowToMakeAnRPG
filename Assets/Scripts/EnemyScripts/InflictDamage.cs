@@ -7,6 +7,7 @@ public class InflictDamage : MonoBehaviour
     public int DamageAmount = 5;
     public float TargetDistance;
     public float AllowedRange = 2.7f;
+    public AudioSource SwingSword;
 
 
     // Start is called before the first frame update
@@ -27,6 +28,7 @@ public class InflictDamage : MonoBehaviour
                 TargetDistance = hit.distance;
                 if (TargetDistance <= AllowedRange)
                 {
+                    SwingSword.Play();
                     hit.transform.SendMessage("DeductPoints", DamageAmount, SendMessageOptions.DontRequireReceiver);
                 }
             }
