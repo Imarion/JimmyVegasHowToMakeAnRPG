@@ -6,6 +6,7 @@ public class SwingSword : MonoBehaviour
 {
     public GameObject Sword;
     public int SwordStatus;
+    public static bool isSwinging;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +25,7 @@ public class SwingSword : MonoBehaviour
 
     IEnumerator Swing()
     {
+        isSwinging = true;
         SwordStatus = 1;
         Sword.GetComponent<Animation>().Play("ElvenSwordAnim");
 
@@ -31,5 +33,6 @@ public class SwingSword : MonoBehaviour
         yield return new WaitForSeconds(1.0f);
 
         SwordStatus = 0;
+        isSwinging = false;
     }
 }
