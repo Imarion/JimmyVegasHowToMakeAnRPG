@@ -37,7 +37,7 @@ public class SpiderBossAttack : MonoBehaviour
         yield return new WaitForSeconds(1.1f);
         if (SpiderEnemy.GlobalSpider != 6)
         {
-            HealthMonitor.HealthValue -= 1;
+            HealthMonitor.HealthValue -= 20;
         }
         yield return new WaitForSeconds(0.4f);
         DealingDamage = 0;

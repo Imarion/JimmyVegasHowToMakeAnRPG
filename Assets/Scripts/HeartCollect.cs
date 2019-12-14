@@ -23,8 +23,21 @@ public class HeartCollect : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        collectSound.Play();
-        HealthMonitor.HealthValue++;
-        thisHeart.SetActive(false);
+        if (HealthMonitor.HealthValue == 300)
+        {
+            //eventually do something
+        }
+        if (HealthMonitor.HealthValue > 280 && HealthMonitor.HealthValue < 300)
+        {
+            collectSound.Play();
+            HealthMonitor.HealthValue = 300;
+            thisHeart.SetActive(false);
+        }
+        if (HealthMonitor.HealthValue <= 280 )
+        {
+            collectSound.Play();
+            HealthMonitor.HealthValue += 20;
+            thisHeart.SetActive(false);
+        }
     }
 }
